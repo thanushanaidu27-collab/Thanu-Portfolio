@@ -1,0 +1,129 @@
+.projects__filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.projects__filter-btn {
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all 0.25s ease;
+}
+
+.projects__filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.projects__filter-btn--active {
+  background: var(--gradient-brand);
+  color: #fff;
+  border-color: transparent;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.projects__card {
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.projects__card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.projects__thumb {
+  position: relative;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-brand);
+  overflow: hidden;
+}
+
+.projects__thumb-label {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.projects__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projects__thumb:hover .projects__overlay {
+  opacity: 1;
+}
+
+.projects__overlay a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: transform 0.25s ease;
+}
+
+.projects__overlay a:hover {
+  transform: translateY(-3px);
+}
+
+.projects__body {
+  padding: 1.5rem;
+}
+
+.projects__title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.projects__desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.1rem;
+}
+
+.projects__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}

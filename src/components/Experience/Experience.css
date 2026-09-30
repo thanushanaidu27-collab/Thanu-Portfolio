@@ -1,0 +1,123 @@
+.experience__timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.experience__timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 51%;
+  width: 2px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+.experience__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 50%;
+}
+
+.experience__item--left {
+  left: 0;
+  padding-right: 2.5rem;
+  text-align: right;
+}
+
+.experience__item--right {
+  left: 50%;
+  padding-left: 2.5rem;
+}
+
+.experience__marker {
+  position: absolute;
+  top: 0.4rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 0 0 6px var(--bg), 0 0 0 7px var(--border);
+  z-index: 1;
+}
+
+.experience__item--left .experience__marker {
+  right: -21px;
+}
+
+.experience__item--right .experience__marker {
+  left: -21px;
+}
+
+.experience__card {
+  padding: 1.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.experience__role {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+.experience__company {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 0.9rem;
+}
+
+.experience__points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.experience__item--left .experience__points {
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .experience__timeline::before {
+    left: 20px;
+  }
+
+  .experience__item,
+  .experience__item--left,
+  .experience__item--right {
+    width: 100%;
+    left: 0;
+    padding-left: 3.5rem;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .experience__item--left .experience__points {
+    align-items: flex-start;
+  }
+
+  .experience__item--left .experience__marker,
+  .experience__item--right .experience__marker {
+    left: -1px;
+    right: auto;
+  }
+}

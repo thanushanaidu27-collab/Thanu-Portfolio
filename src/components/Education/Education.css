@@ -1,0 +1,69 @@
+.education__timeline {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.education__timeline::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 21px;
+  width: 2px;
+  background: var(--border);
+}
+
+.education__item {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  padding-left: 0;
+}
+
+.education__marker {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  z-index: 1;
+}
+
+.education__card {
+  flex: 1;
+  padding: 1.6rem 1.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.education__degree {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.7rem;
+}
+
+.education__college {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin: 0.3rem 0 0.6rem;
+}
+
+.education__achievement {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}

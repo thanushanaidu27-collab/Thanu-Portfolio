@@ -1,0 +1,117 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 4.5rem;
+}
+
+.about__image-wrap {
+  position: relative;
+  width: min(320px, 100%);
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.about__image-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  border: 3px dashed var(--primary);
+  opacity: 0.5;
+}
+
+.about__image {
+  position: absolute;
+  inset: 18px;
+  border-radius: 26px;
+  background: var(--gradient-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.about__image span {
+  font-family: var(--font-display);
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.about__heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.about__points {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about__points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about__point-icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.about__stat-card {
+  padding: 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.about__stat-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.about__stat-value {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about__stat-label {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
